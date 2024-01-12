@@ -1,0 +1,20 @@
+@import url(https://fonts.googleapis.com/css?family=Montserrat:regular,500,600,700&display=swap);
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  html {
+    @apply scroll-smooth overflow-x-hidden;
+  }
+  body {
+    @apply w-full h-full text-base font-normal overflow-x-hidden;
+  }
+}
+
+@layer components {
+  .container {
+    @apply mx-auto max-w-screen-2xl px-4 md:px-8;
+  }
+}
