@@ -1,20 +1,23 @@
 import React from "react";
 import axios from "axios";
-import { Location } from "../types/Characters";
+import { Locations } from "../types/Locations";
 
 import Loader from "./Loader";
 import LocationItem from "./LocationItem";
 
-const LocationList = () => {
-  const [locations, setLocations] = React.useState<Location[]>([]);
+const LocationList: React.FC = () => {
+  const [locations, setLocations] = React.useState<Locations[]>([]);
   const [loading, setLoading] = React.useState<boolean>(true);
+  console.log(location);
 
   React.useEffect(() => {
-    const fetchData = async () => {
+    const fetchData = async (): Promise<void> => {
       try {
         const response = await axios.get(
           "https://rickandmortyapi.com/api/location"
         );
+        console.log(response);
+
         setLocations(response.data.results);
         setLoading(false);
       } catch (error) {

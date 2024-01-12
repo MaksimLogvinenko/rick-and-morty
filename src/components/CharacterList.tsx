@@ -10,7 +10,7 @@ const CharacterList: React.FC = () => {
   const [loading, setLoading] = React.useState<boolean>(true);
 
   React.useEffect(() => {
-    const fetchData = async () => {
+    const fetchData = async (): Promise<void> => {
       try {
         const response = await axios.get(
           "https://rickandmortyapi.com/api/character"

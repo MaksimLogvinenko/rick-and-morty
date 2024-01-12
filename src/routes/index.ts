@@ -6,6 +6,7 @@ const CharacterPersone = lazy(
   () => import("../pages/Character/CharacterPersone")
 );
 const Locations = lazy(() => import("../pages/Locations"));
+const LocationsItem = lazy(() => import("../pages/Locations/LocationsItem"));
 
 const coreRoutes = [
   {
@@ -31,6 +32,12 @@ const coreRoutes = [
     title: "Locations",
     component: Locations,
     header: true,
+  },
+  {
+    path: "/locations/:id",
+    title: "LocationsItem",
+    component: LocationsItem,
+    header: false,
   },
 ];
 

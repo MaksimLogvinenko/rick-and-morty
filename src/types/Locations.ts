@@ -3,7 +3,7 @@ export interface Locations {
   name: string;
   type: string;
   dimension: string;
-  residents: [];
+  residents: string[];
   url: string;
   created: string;
 }
